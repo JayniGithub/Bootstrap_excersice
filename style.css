@@ -1,0 +1,42 @@
+.image{
+    background: url(./img-1.jpg);
+    height: 700px;
+
+}
+
+.box{
+    position: relative;
+    left: -30px;
+    top: 300px;
+    max-width: 700px;
+    background: blue;
+    color: #fff;
+    
+}
+
+.box::before{
+    content: url(./rect-1.svg);
+    position: absolute;
+    top: 91px;
+    z-index: -1;
+
+}
+
+/* responsive styling */
+@media (max-width:768px){
+    .box{
+        max-width: 400px;
+        position: relative;
+        left: 0px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width:576px){
+    .box{
+        max-width: 300px;
+        position: relative;
+        left: 0px;
+        margin: 0 auto;
+    }
+}
